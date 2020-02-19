@@ -1,6 +1,7 @@
 alias gitdog="git log --graph --all --decorate"
 alias untar="tar -zxvf "
 alias ös='ls'
+alias opn=xdg-open
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
