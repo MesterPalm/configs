@@ -36,8 +36,7 @@ set completeopt-=preview
 set number
 set relativenumber
 set nowrap
-
-
+let mapleader = " "
 "Smart Window movement
 map <C-j> <C-W>j
 map <C-k> <C-W>k
@@ -49,6 +48,32 @@ map <C-up> <C-W>k
 map <C-left> <C-W>h
 map <C-right> <C-W>l
 
+map <S-j> <C-W>J
+map <S-k> <C-W>K
+map <S-h> <C-W>H
+map <S-l> <C-W>L
+
+map <S-down> <C-W>J
+map <S-up> <C-W>K
+map <S-left> <C-W>H
+map <S-right> <C-W>L
+
+"Smart window creation
+map <Leader>q :vsplit<cr>
+map <Leader>w :split<cr>
+
+"window resizing
+map <Leader><down> <C-w>10-
+map <Leader><up> <C-w>10+
+map <Leader><left> <C-w>10<
+map <Leader><right> <C-w>10>
+
+"Better tab insertion
+map <Tab> >>
+map <S-Tab> <<
+
+"Search de-highlight
+map <Leader>n :noh<cr> 
 
 " Other
 set tabstop=4
