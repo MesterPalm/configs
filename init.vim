@@ -28,7 +28,6 @@ let  g:lightline = {
       \ },
       \ }
 "Turn on deoplete and turn of the preview window
-set cursorline
 let g:deoplete#enable_at_startup = 1
 set completeopt-=preview
 
@@ -58,6 +57,17 @@ map <S-up> <C-W>K
 map <S-left> <C-W>H
 map <S-right> <C-W>L
 
+"cursor options
+set cursorline
+set cursorcolumn
+set mouse=a
+
+"search options
+set ignorecase
+set smartcase
+"Search de-highlight
+map <Leader>n :noh<cr> 
+
 "Smart window creation
 map <Leader>q :vsplit<cr>
 map <Leader>w :split<cr>
@@ -72,8 +82,11 @@ map <Leader><right> <C-w>10>
 map <Tab> >>
 map <S-Tab> <<
 
-"Search de-highlight
-map <Leader>n :noh<cr> 
+"Copy/paste settings
+map <Leader>p "+p
+map <Leader>P "+P
+map <Leader>y "+y
+map <Leader>p "+p
 
 " Other
 set tabstop=4
