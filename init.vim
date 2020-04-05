@@ -121,6 +121,9 @@ map <Leader>3 3gt<cr>
 map <Leader>4 4gt<cr>
 map <Leader>5 5gt<cr>
 map <Leader>6 6gt<cr>
+map <Leader>7 7gt<cr>
+map <Leader>8 8gt<cr>
+map <Leader>9 9gt<cr>
 
 " Other
 set tabstop=4
