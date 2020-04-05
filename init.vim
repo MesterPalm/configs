@@ -69,16 +69,6 @@ map <C-up> <C-W>k
 map <C-left> <C-W>h
 map <C-right> <C-W>l
 
-map <S-j> <C-W>J
-map <S-k> <C-W>K
-map <S-h> <C-W>H
-map <S-l> <C-W>L
-
-map <S-down> <C-W>J
-map <S-up> <C-W>K
-map <S-left> <C-W>H
-map <S-right> <C-W>L
-
 "cursor options
 set cursorline
 set cursorcolumn
@@ -113,8 +103,8 @@ map <Leader>p "+p
 "Tab settings
 map <Leader>t :tabnew<cr>
 map <Leader>T :tabnew
-map <C-q> :tabNext<cr>
-map <C-w> :tabnext<cr>
+map <S-h> :tabNext<cr>
+map <S-l> :tabnext<cr>
 map <Leader>1 1gt<cr>
 map <Leader>2 2gt<cr>
 map <Leader>3 3gt<cr>
