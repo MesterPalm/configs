@@ -14,7 +14,29 @@ call plug#begin('~/.vim/plugged')
 	Plug 'zchee/deoplete-jedi'
 	Plug 'zchee/deoplete-go', {'build': {'unix': 'make'}}
 	Plug 'calviken/vim-gdscript3'
+	Plug 'Shougo/neosnippet.vim'
+	Plug 'Shougo/neosnippet-snippets'
 call plug#end()
+
+"neosnippet settings
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+"imap <expr><TAB>
+" \ pumvisible() ? "\<C-n>" :
+" \ neosnippet#expandable_or_jumpable() ?
+" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For conceal markers.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
 
 "set git branch information to lightline and the colorscheme of lightline
 let  g:lightline = {
@@ -87,6 +109,18 @@ map <Leader>p "+p
 map <Leader>P "+P
 map <Leader>y "+y
 map <Leader>p "+p
+
+"Tab settings
+map <Leader>t :tabnew<cr>
+map <Leader>T :tabnew
+map <C-q> :tabNext<cr>
+map <C-w> :tabnext<cr>
+map <Leader>1 1gt<cr>
+map <Leader>2 2gt<cr>
+map <Leader>3 3gt<cr>
+map <Leader>4 4gt<cr>
+map <Leader>5 5gt<cr>
+map <Leader>6 6gt<cr>
 
 " Other
 set tabstop=4
